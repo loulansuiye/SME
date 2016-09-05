@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>earth.png</file>
+        <file>open.png</file>
+        <file>new.png</file>
+        <file>load.png</file>
+        <file>browser.png</file>
+        <file>clicp.png</file>
+        <file>recent.png</file>
+        <file>close.png</file>
+        <file>closeall.png</file>
+        <file>print.png</file>
+        <file>save.png</file>
+        <file>save_all.png</file>
+    </qresource>
+</RCC>
