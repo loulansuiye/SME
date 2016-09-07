@@ -22,13 +22,16 @@ class TreeViewWid : public QTreeWidget
 {
     Q_OBJECT
 public:
-    explicit TreeViewWid(QTreeWidget *parent = 0);
+    TreeViewWid(QTreeWidget *parent = 0);
     void showFiles(const QStringList &files);
     void showDir(const QDir &directory);
     QTreeWidget *tree;
 signals:
 
 public slots:
+    void showFileInfo(QTreeWidgetItem *item, int column);
+    void showDirectory();
+
 private:
     QDir currentDir;
     QStringList files;

@@ -467,7 +467,7 @@ void MainWindow::file_open()
     QString  directory= QFileDialog::getExistingDirectory(this,
                                tr("Find Files"), QDir::currentPath());
     //QString strPath = QDir::currentPath ();
-    qDebug()<<directory;
+    //qDebug("current directory is %s")<<directory;
     //fileDialog->exec();
     //QString fileName  = QFileDialog.getOpenFileName ()
 }

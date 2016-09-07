@@ -1,25 +1,25 @@
 ﻿#include "showwidget.h"
-#include<QVBoxLayout>
+#include<QHBoxLayout>
 #include<QSplitter>
 ShowWidget::ShowWidget(QWidget *parent) : QWidget(parent)
 {
 
+    QVBoxLayout *main_layout = new QVBoxLayout(this);
+    QHBoxLayout  *up_layout = new QHBoxLayout(this);
 
-   text  = new QTextEdit;
-   treeViewWid = new TreeViewWid;
-   treeViewWid->sizeAdjustPolicy ();
-   treeViewWid->setContentsMargins(0,0,0,0);
-   QSplitter *splitter_main = new QSplitter(this);
-   splitter_main->addWidget (treeViewWid);
-   splitter_main->adjustSize();
-    QSize size_main = QSize(splitter_main->width (),splitter_main->height ());
-  treeViewWid->resize (size_main);
-   QSplitter *splitter_right = new QSplitter(splitter_main);
-   splitter_right->setOpaqueResize (false);
-   splitter_right->adjustSize();
-   splitter_main->addWidget (text);
-   QSize size = QSize(parent->width (),parent->height ());
-   //splitter_right->resize (size);
+    treeViewWid = new TreeViewWid;
+    treeViewWid->setMaximumWidth(parent->width()*0.4);
+    edit_text  = new QTextEdit;
+    listView = new QListView;
+    listView->setMaximumWidth(parent->width()*0.2);
 
-   splitter_main->resize (size);
+    up_layout->addWidget (treeViewWid);
+    up_layout->addWidget (edit_text);
+    up_layout->addWidget(listView);
+
+    down_dist = new QTextEdit;
+    down_dist->setMaximumHeight(100);
+
+    main_layout->addLayout(up_layout);
+    main_layout->addWidget(down_dist);
 }

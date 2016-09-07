@@ -6,8 +6,8 @@ int main(int argc, char *argv[])
    QApplication a(argc, argv);
     a.setWindowIcon (QIcon(":/res/earth.png"));
     MainWindow w;
-    w.setMaximumSize (700,700);
-    w.setMinimumSize (700,700);
+   // w.setMaximumSize (700,700);
+    //w.setMinimumSize (900,900);
     w.showMaximized();
     w.show();
 
